@@ -1,0 +1,118 @@
+---
+title: "SDS192 Mini-Project 1"
+output:
+  html_document:
+    toc: no
+    df_print: paged
+  pdf_document:
+    toc: no
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+# Do not edit this chunk unless you know what you are doing
+knitr::opts_chunk$set(
+  echo = TRUE, message = FALSE, fig.width = 16/2, fig.height = 9/2
+  )
+```
+
+```{r, echo=FALSE}
+# Load all packages here
+library(ggplot2)
+library(tidyverse)
+library(lubridate)
+library(ical)
+```
+
+## Administrative info:
+
+* Group number: 1
+* Group leader name: 
+* Group leader academic email: 
+* Partner name: 
+* Partner academic email: 
+
+
+## Importing the calendar
+
+Uncomment the first line below and replace FILL_FILE_NAME with the name of your calendar file:
+
+```{r, echo=FALSE}
+# calendar_data <- "FILL_FILE_NAME.ics" |> 
+  ## Use ical package to import into R and then convert to "tibble" data frame format:
+  # ical_parse_df() |> 
+  # as_tibble() |> 
+  ## Use lubridate packge to wrangle dates and times. We'll do this later this semester:
+  # mutate(
+  #  start_datetime = with_tz(start, tzone = "America/New_York"),
+  #  end_datetime = with_tz(end, tzone = "America/New_York"),
+  #  minutes = end_datetime - start_datetime,
+  #  date = floor_date(start_datetime, unit = "day")
+  #) |>
+  ## Make calendar entry summary all lowercase:
+  # mutate(summary = tolower(summary)) |> 
+  ## Do data wrangling to compute number of minutes and hours:
+  # group_by(date, summary) |>
+  # summarize(minutes = sum(minutes) |> as.numeric()) |>
+  # If minutes are incorrectly reported in hours, uncomment next line to correct: 
+  # mutate(minutes = minutes*60) |>
+  # (Optional) To filter dates for only those between 2019-09-03 and 2019-09-07, 
+  ## uncomment next line:
+  # filter(date >= "2019-09-03" & date <= "2019-09-07") |> 
+  # mutate(hours = minutes/60)
+```
+
+Make sure you data looks good by looking at the data:
+
+```{r}
+# glimpse(calendar_data)
+```
+
+```{r, eval=FALSE}
+## Note by setting eval=FALSE, R Markdown will not "evaluate" this code chunk and 
+## ignore it.
+# View(calendar_data)
+```
+
+
+# Q1: Peer Evaluation Google Form
+
+Fill out the peer evaluation Google form to receive credit.
+
+
+
+# Q2: Analysis
+
+## Data visualization 1
+
+```{r}
+# Write your code to create data visualization #1 here:
+
+```
+
+Replace this text with your written analysis of data visualization #1 (no more than 150 words).
+
+
+
+## Data visualization 2
+
+```{r}
+# Write your code to create data visualization #2 here:
+
+```
+
+Replace this text with your written analysis of data visualization #2 (no more than 150 words).
+
+
+
+# Q3: Joint Reflection
+
+## Group leader question about how they use their time (no more than 250 words):
+
+
+
+
+## Partner question about how they use their time (no more than 250 words): 
+
+
+
